@@ -1,15 +1,29 @@
 package com.example.susanasantosmoreno.reproductordemusica;
 
-public class Songs implements Comparable<Songs>{
 
+public class Songs implements Comparable<Songs> {
+
+    private long songId;
     private String songTitle;
     private String songArtist;
     private int songImage;
+    private long songDuration;
 
-    public Songs(String songTitle, String songArtist, int songImage) {
+    public Songs(long songId, String songTitle, String songArtist, int songImage,
+                 long songDuration) {
+        this.songId = songId;
         this.songTitle = songTitle;
         this.songArtist = songArtist;
         this.songImage = songImage;
+        this.songDuration = songDuration;
+    }
+
+    public long getSongId() {
+        return songId;
+    }
+
+    public void setSongId(long songId) {
+        this.songId = songId;
     }
 
     public String getSongTitle() {
@@ -34,6 +48,14 @@ public class Songs implements Comparable<Songs>{
 
     public void setSongImage(int songImage) {
         this.songImage = songImage;
+    }
+
+    public long getSongDuration() {
+        return songDuration;
+    }
+
+    public void setSongDuration(long songDuration) {
+        this.songDuration = songDuration;
     }
 
     @Override
